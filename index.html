@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+    <link rel="stylesheet" href="./css/index.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+
+   
+  </head>
+  <body>
+   <div class="snowflakes" aria-hidden="true">
+     <div class="snowflake">❅</div>
+     <div class="snowflake">❆</div>
+     <div class="snowflake">❅</div>
+     <div class="snowflake">❆</div>
+     <div class="snowflake">❅</div>
+     <div class="snowflake">❆</div>
+     <div class="snowflake">❅</div>
+     <div class="snowflake">❆</div>
+     <div class="snowflake">❅</div>
+     <div class="snowflake">❆</div>
+   </div>
+
+   <header>
+      <div class="header_contet p-2 bg-danger d-flex justify-content-between align-items-center">
+         <h1 class="title1 m-0 animate__animated animate__shakeX animate__infinit">Quiz Games</h1>
+         <button class="btn_1 btn btn-light"><a href="" class="text-decoration-none animate__animated animate__shakeX animate__infinite">Dashboard</a></button>
+      </div>
+   </header>
+  <section class="carousel">
+    <h1 class="carousel1 text-danger">Create Your Own Quiz</h1>
+    <p class="carousel2">Generate custom quizzes on any topic with our AI-powered platform</p>
+    <button onclick="openQuizModal()" class="carousel3 animate__animated animate__flash animate-delay: 0.9s animate__infinite">Start Quiz <i class="fa-solid fa-arrow-right"></i></button>
+
+    <div id="quizModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Create Your Quiz</h2>
+        
+        <div class="form-group">
+          <label>Quiz Topic</label>
+          <input type="text" placeholder="Enter the topic for your quiz">
+        </div>
+
+        <div class="form-group">
+          <label>Language</label>
+          <select>
+            <option value="" disabled selected>Select quiz language</option>
+            <option value="en">English</option>
+            <option value="vi">Vietnamese</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label id="numberfix">Number of Questions</label>
+          <input type="number" value="9" min="5" max="20">
+          <small>Choose between 5 and 20 questions</small>
+        </div>
+
+        <button class="generate-btn">Generate Quiz <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  
+    <script src="./js/index.js"></script>
+  </body>
+</html>
